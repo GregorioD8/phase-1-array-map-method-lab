@@ -1,3 +1,4 @@
+
 const tutorials = [
   'what does the this keyword mean?',
   'What is the Constructor OO pattern?',
@@ -11,6 +12,22 @@ const tutorials = [
   'what is JSONP?'
 ];
 
-const titleCased = () => {
-  return tutorials
+
+//sets the first letter each word to uppercase to uppercase for titles
+function titleCased(){
+
+const newArray = tutorials.map(currentTitle => { 
+  return currentTitle.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ')
+  
+})
+
+return newArray
 }
+ 
+
+
+
+  
+
+
+console.log(titleCased())
